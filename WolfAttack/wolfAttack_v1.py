@@ -63,10 +63,10 @@ def bunny_movement():
   global bunnyX_change
   if event.type == pygame.KEYDOWN:
     if event.key == pygame.K_LEFT:
-      bunnyX_change = -2
+      bunnyX_change = -0.7
 
     if event.key == pygame.K_RIGHT:
-      bunnyX_change = 2
+      bunnyX_change = 0.7
 
     if event.key == pygame.K_SPACE:
       shot()
@@ -141,10 +141,10 @@ while running:
     wolfX[i] += wolfX_change[i]
 
     if wolfX[i] <= 0:
-      wolfX_change[i] = 1
+      wolfX_change[i] = 0.3
       wolfY[i] += wolfY_change[i]
     elif wolfX[i] >= 282:
-      wolfX_change[i] = -1
+      wolfX_change[i] = -0.3
       wolfY[i] += wolfY_change[i]
 
     enemy(wolfX[i], wolfY[i], i)
